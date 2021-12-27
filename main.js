@@ -26,10 +26,11 @@ function my_mouseleave(e){
 canvas.addEventListener("mousemove", my_mousemove);
 function my_mousemove(e){
     mouseEvent = "mouseMove"
-}
 
-var current_x=e.client - canvas.offsetLeft;
-var current_y=e.client - canvas.offsetTop;
+var current_x= e.clientx - canvas.offsetLeft;
+var current_y= e.clienty - canvas.offsetTop;
+
+}
 
 if (mouseEvent == "mouseDown") {
     ctx.beginPath();
