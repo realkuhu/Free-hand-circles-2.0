@@ -1,9 +1,13 @@
+
+//I have fixed some stuff including making the currentX and Y into capitals I also found a few some code without semicolons. I also took the the "var" out of currentX and currentY but it still doesn't work.
+
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
-colour="empty"
-radius="empty"
-line_width="empty"
+colour="empty";
+radius="empty";
+line_width="empty";
 var mouseEvent="Empty";
+
 
 canvas.addEventListener("mousedown", my_mousedown);
 function my_mousedown(e){
@@ -25,10 +29,10 @@ function my_mouseleave(e){
 
 canvas.addEventListener("mousemove", my_mousemove);
 function my_mousemove(e){
-    mouseEvent = "mouseMove"
+    mouseEvent = "mouseMove";
 
-var current_x= e.clientx - canvas.offsetLeft;
-var current_y= e.clienty - canvas.offsetTop;
+current_x= e.clientX - canvas.offsetLeft;
+current_y= e.clientY - canvas.offsetTop;
 
 }
 
@@ -36,6 +40,6 @@ if (mouseEvent == "mouseDown") {
     ctx.beginPath();
     ctx.strokeStyle = colour;
     ctx.lineWidth=line_width;
-    ctx.arc(current_x, current_y, radius,0,2*Math.PI);
+    ctx.arc(current_x , current_y , radius , 0 ,2 * Math.PI);
     ctx.stroke();
 }
