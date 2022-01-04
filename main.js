@@ -29,13 +29,8 @@ function my_mouseleave(e){
 
 canvas.addEventListener("mousemove", my_mousemove);
 function my_mousemove(e){
-    mouseEvent = "mouseMove";
-
 current_x= e.clientX - canvas.offsetLeft;
 current_y= e.clientY - canvas.offsetTop;
-
-}
-
 if (mouseEvent == "mouseDown") {
     ctx.beginPath();
     ctx.strokeStyle = colour;
@@ -43,3 +38,5 @@ if (mouseEvent == "mouseDown") {
     ctx.arc(current_x , current_y , radius , 0 ,2 * Math.PI);
     ctx.stroke();
 }
+}
+
